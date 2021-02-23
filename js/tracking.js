@@ -1,9 +1,11 @@
 let trackingBtn = document.getElementById("tracking-btn")
+let stopTrackingBtn = document.getElementById("stop-tracking-btn")
 let trackingTimestamp = document.getElementById("tracking-timestamp")
 let trackingLongitude = document.getElementById("tracking-longitude")
 let trackingLatitude = document.getElementById("tracking-latitude")
 let trackingSpeed = document.getElementById("tracking-speed")
 
+let tracker;
 // let options = {
 //   enableHighAccuracy: true,
 //   timeout: 5000,
@@ -22,7 +24,12 @@ function error(err) {
 }
 
 function startTracking() {
-  navigator.geolocation.watchPosition(displayLocation, error, options)
+  tracker = navigator.geolocation.watchPosition(displayLocation, error, options)
 }
 
-snapshotBtn.addEventListener("click", startTracking, false)
+function stopTracking() {
+  navigator.geolocation.clearWatch(tracker);
+}
+
+trackingBtn.addEventListener("click", startTracking, false)
+stopTrackingBtn.addEventListener("click", stopTracking, false)
