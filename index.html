@@ -4,17 +4,35 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/skeleton.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  
+  <title>loift</title>
 </head>
 <body>
-
-  <button id="button">Click</button>
+  <div class="tracking-box">
+    <button id="snapshot-btn">Tracking</button>
   <table>
-    <tr><td>Longitude:</td><td><input type="text" id="longitude" readonly /></td></tr>
-    <tr><td>Latitude:</td><td><input type="text" id="latitude" readonly /></td></tr>
-    <tr><td>Speed:</td><td><input type="text" id="speed" readonly /></td></tr>
-    <tr><td>Time:</td><td><input type="text" id="timestamp" readonly /></td></tr>
+    <tr><td>Longitude:</td><td><input type="text" id="tracking-longitude" readonly /></td></tr>
+    <tr><td>Latitude:</td><td><input type="text" id="tracking-latitude" readonly /></td></tr>
+    <tr><td>Speed:</td><td><input type="text" id="tracking-speed" readonly /></td></tr>
+    <tr><td>Time:</td><td><input type="text" id="tracking-timestamp" readonly /></td></tr>
   </table>
-  <script src="./location.js" type="text/javascript"></script>
+  </div>
+
+
+  <div class="snapshot-box">
+  <button id="snapshot-btn">Snapshot</button>
+  <table>
+    <tr><td>Longitude:</td><td><input type="text" id="snapshot-longitude" readonly /></td></tr>
+    <tr><td>Latitude:</td><td><input type="text" id="snapshot-latitude" readonly /></td></tr>
+    <tr><td>Speed:</td><td><input type="text" id="snapshot-speed" readonly /></td></tr>
+    <tr><td>Time:</td><td><input type="text" id="snapshot-timestamp" readonly /></td></tr>
+  </table>
+  </div>
+  <script src="./js/snapshot.js" type="text/javascript"></script>
+  <script src="./js/tracking.js" type="text/javascript"></script>
 </body>
 </html>

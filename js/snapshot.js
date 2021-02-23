@@ -1,8 +1,8 @@
-let button = document.getElementById("button")
-let timestamp = document.getElementById("timestamp")
-let longitude = document.getElementById("longitude")
-let latitude = document.getElementById("latitude")
-let speed = document.getElementById("speed")
+let snapshotBtn = document.getElementById("snapshot-btn")
+let timestamp = document.getElementById("snapshot-timestamp")
+let longitude = document.getElementById("snapshot-longitude")
+let latitude = document.getElementById("snapshot-latitude")
+let speed = document.getElementById("snapshot-speed")
 
 let options = {
   enableHighAccuracy: true,
@@ -21,10 +21,8 @@ function error(err) {
   console.warn(`ERROR(${err.code}): ${err.message}`);
 }
 
-
 function onClick() {
-  console.log("Click")
   navigator.geolocation.getCurrentPosition(displayLocation, error, options)
 }
 
-button.addEventListener("click", onClick, false)
+snapshotBtn.addEventListener("click", onClick, false)
