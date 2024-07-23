@@ -11,15 +11,17 @@
 		"typecheck": "tsc"
 	},
 	"dependencies": {
-		"@mapbox/togeojson": "^0.16.2",
 		"@p5-wrapper/react": "^4.4.2",
 		"@remix-run/node": "^2.10.3",
 		"@remix-run/react": "^2.10.3",
 		"@remix-run/serve": "^2.10.3",
+		"@tmcw/togeojson": "^5.8.1",
+		"@types/geojson": "^7946.0.14",
 		"isbot": "^4.1.0",
 		"p5": "^1.9.4",
 		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
+		"react-dom": "^18.2.0",
+		"xmldom-ts": "^0.3.1"
 	},
 	"devDependencies": {
 		"@remix-run/dev": "^2.10.3",
