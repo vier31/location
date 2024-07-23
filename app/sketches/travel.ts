@@ -1,4 +1,6 @@
-export function travel(p5) {
+import { P5CanvasInstance } from "@p5-wrapper/react";
+
+export function travel(p5: P5CanvasInstance) {
   p5.setup = () => p5.createCanvas(600, 400, p5.WEBGL);
 
   p5.draw = () => {
